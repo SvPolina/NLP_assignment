@@ -66,10 +66,6 @@ def lemmatize_text(text):
     text = [word.lemma_ if word.lemma_ != '-PRON-' else word.text for word in text]
     return text  
 
-#def lemmatize_text(text):
-#    text = nlp(text, disable=['parser','ner'])
-#    lemma = [token.lemma_ for token in text]
-#    return text 
 
 def prepare_data(df,col):
   new_col="processed_"+col
